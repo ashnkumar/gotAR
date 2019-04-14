@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7dh-A0-qGE">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="WeU-Be-bo7">
+            <objects>
+                <viewController id="7dh-A0-qGE" customClass="ViewController" customModule="ARPersistence" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="loo-cG-myf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" sceneName="CameraSetup.scn" wantsMultisampling="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="delegate" destination="7dh-A0-qGE" id="6YV-aS-dot"/>
+                                    <outletCollection property="gestureRecognizers" destination="0gP-0b-mlo" appends="YES" id="Bjp-eC-9Fb"/>
+                                </connections>
+                            </arscnView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7n1-lm-7Eq">
+                                <rect key="frame" x="143.5" y="788" width="127" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gad-7G-M17" customClass="RoundedButton" customModule="ARPersistence" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="61" height="34"/>
+                                        <color key="backgroundColor" red="0.32083354040000001" green="0.52389981730000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <inset key="contentEdgeInsets" minX="13" minY="8" maxX="13" maxY="8"/>
+                                        <state key="normal" title="Mute">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveExperience:" destination="7dh-A0-qGE" eventType="touchUpInside" id="LXd-41-0lM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPS-Ta-wxF" customClass="RoundedButton" customModule="ARPersistence" customModuleProvider="target">
+                                        <rect key="frame" x="69" y="0.0" width="58" height="34"/>
+                                        <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <inset key="contentEdgeInsets" minX="13" minY="8" maxX="13" maxY="8"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="removeAnObject:" destination="7dh-A0-qGE" eventType="touchUpInside" id="NKm-Bh-L7K"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="37h-bD-Iyn">
+                                <rect key="frame" x="114.5" y="742" width="185" height="38"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pkc-hu-yuO">
+                                    <rect key="frame" x="0.0" y="0.0" width="185" height="38"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initializing AR session." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCE-IA-wLv">
+                                            <rect key="frame" x="8" y="8" width="169" height="22"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hCE-IA-wLv" firstAttribute="top" secondItem="pkc-hu-yuO" secondAttribute="top" constant="8" id="JKb-CT-61N"/>
+                                        <constraint firstAttribute="trailing" secondItem="hCE-IA-wLv" secondAttribute="trailing" constant="8" id="LiE-Qe-sn9"/>
+                                        <constraint firstAttribute="bottom" secondItem="hCE-IA-wLv" secondAttribute="bottom" constant="8" id="mwB-uL-E6w"/>
+                                        <constraint firstItem="hCE-IA-wLv" firstAttribute="leading" secondItem="pkc-hu-yuO" secondAttribute="leading" constant="8" id="nFY-vm-h0R"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="11U-Ec-Yx6"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOo-FY-E3u" userLabel="Restart Experience Button Icon">
+                                <rect key="frame" x="346" y="60" width="52" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="2wt-aL-b6l"/>
+                                    <constraint firstAttribute="height" constant="35" id="Pga-5V-7sb"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="24" maxY="12"/>
+                                <state key="normal" image="restart"/>
+                                <state key="selected" image="restartPressed"/>
+                                <state key="highlighted" image="restartPressed"/>
+                                <connections>
+                                    <action selector="resetTracking:" destination="7dh-A0-qGE" eventType="touchUpInside" id="OJ4-o7-irp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="37h-bD-Iyn" firstAttribute="centerX" secondItem="loo-cG-myf" secondAttribute="centerX" id="AKe-xr-vIf"/>
+                            <constraint firstItem="7n1-lm-7Eq" firstAttribute="top" secondItem="37h-bD-Iyn" secondAttribute="bottom" constant="8" id="Afi-KY-GrP"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="loo-cG-myf" secondAttribute="bottom" id="Hhd-uh-Izd"/>
+                            <constraint firstItem="7n1-lm-7Eq" firstAttribute="centerX" secondItem="loo-cG-myf" secondAttribute="centerX" id="M56-UG-ENc"/>
+                            <constraint firstItem="cOo-FY-E3u" firstAttribute="top" secondItem="71x-2l-AWw" secondAttribute="top" constant="16" id="NFi-fW-FC6"/>
+                            <constraint firstItem="37h-bD-Iyn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="71x-2l-AWw" secondAttribute="leading" constant="20" id="O9Z-UY-YPe"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="loo-cG-myf" secondAttribute="leading" id="UTU-YA-j2I"/>
+                            <constraint firstAttribute="trailing" secondItem="cOo-FY-E3u" secondAttribute="trailing" constant="16" id="XaW-Jf-LNj"/>
+                            <constraint firstItem="71x-2l-AWw" firstAttribute="bottom" secondItem="7n1-lm-7Eq" secondAttribute="bottom" constant="40" id="fzR-Xp-aNx"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="loo-cG-myf" secondAttribute="trailing" id="ldO-28-oR5"/>
+                            <constraint firstItem="71x-2l-AWw" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="37h-bD-Iyn" secondAttribute="trailing" constant="20" id="sBt-yC-qUi"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="loo-cG-myf" secondAttribute="top" id="vZb-xW-Wfg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="71x-2l-AWw"/>
+                    </view>
+                    <connections>
+                        <outlet property="saveExperienceButton" destination="gad-7G-M17" id="yj3-eb-u44"/>
+                        <outlet property="sceneView" destination="BrB-h1-WRS" id="sgr-g8-kdG"/>
+                        <outlet property="sessionInfoLabel" destination="hCE-IA-wLv" id="fqx-0o-IdX"/>
+                        <outlet property="sessionInfoView" destination="37h-bD-Iyn" id="e6g-gN-reW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hvH-ud-t1P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="dh1-aA-Oau" customClass="SCNScene"/>
+                <tapGestureRecognizer id="0gP-0b-mlo">
+                    <connections>
+                        <action selector="handleSceneTap:" destination="7dh-A0-qGE" id="rVD-lF-42A"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1028.985507246377" y="-222.99107142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="restart" width="20" height="23"/>
+        <image name="restartPressed" width="20" height="23"/>
+    </resources>
+</document>
